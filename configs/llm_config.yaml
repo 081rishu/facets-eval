@@ -1,0 +1,19 @@
+llm:
+  provider: "groq"
+  api_key_env: "GROQ_API_KEY"
+
+  model: "llama-3.1-8b-instant"
+
+  temperature: 0.1
+  max_tokens: 2048
+  top_p: 0.9
+  timeout_sec: 30
+
+  max_retries: 3
+  retry_delay_sec: 2
+
+  enable_logprobs: true
+
+  groq:
+    batch_delay_sec: 1.0
+    base_url: null

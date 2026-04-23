@@ -1,0 +1,7 @@
+paths:
+  enriched_facets: "data/processed/Enriched_Facets.csv"
+  # Optional: facet_db: "data/facets.db"  # For SQLite backend
+
+inference:
+  facet_batch_size: 10  # Adjust based on model context window
+  # Optional: category_routing: true  # Enable category-based batching

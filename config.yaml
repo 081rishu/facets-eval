@@ -1,0 +1,18 @@
+paths:
+  input_csv: "data/raw/Facets Assignment.csv"
+  output_csv: "data/processed/Enriched_Facets.csv"
+  logs_dir: "logs"
+  review_sample_file: "data/processed/facets_review_sample.csv"
+
+enrichment:
+  batch_size: 5  # Small due to token-heavy schema
+  review_sample_ratio: 0.05  # 5% for manual QA
+  
+validation:
+  min_definition_length: 10
+  facet_id_pattern: "^FACET-\\d{3,5}$"  # Supports up to 99,999 facets
+
+deduplication:
+  enabled: true
+  embedding_model: "all-MiniLM-L6-v2"
+  similarity_threshold: 0.92
